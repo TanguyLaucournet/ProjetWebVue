@@ -10,7 +10,7 @@
         ref="adresse"
       />
       <button
-        class="border rounded bg-gradient-to-r from-red-700 to-pink-500 text-white ml-2 px-2"
+        class="border rounded bg-gradient-to-r from-blue-700 to-black text-white ml-2 px-2"
         type="submit"
       >
         Check Wallet
@@ -46,7 +46,7 @@ export default {
   display: grid;
   place-items: center;
   
-  background:#2D5B90;
+  background:#FFFFFF;
   width: 100%;
   height: 100%;
   

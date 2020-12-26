@@ -1,6 +1,6 @@
 <template>
   <div class="m-auto">
-    <h1 class="text-3xl text-center my-4">Dc Cryptos {{ CryptosCount }}</h1>
+    <h1 class="text-3xl text-center my-4">Cryptos {{ CryptosCount }}</h1>
     <ul class="border rounded p-2">
       <li
         class="flex justify-between"
@@ -21,7 +21,7 @@
         ref="newCryptoRef"
       />
       <button
-        class="border rounded bg-gradient-to-r from-red-700 to-pink-500 text-white ml-2 px-2"
+        class="border rounded bg-gradient-to-r from-blue-700 to-black text-white ml-2 px-2"
         type="submit"
       >
         Add Crypto

@@ -4,7 +4,7 @@ import Calendar from "./pages/Calendar";
 import Home from "./pages/Home";
 import Wallet from "./pages/Wallet";
 import Crypto from "./pages/Crypto";
-import Test from "./pages/Test";
+import Quizz from "./pages/Quizz";
 import Login from "./pages/Login"
 import store from "./store/index";
 import Register from "./components/Register"
@@ -15,7 +15,7 @@ const routes = [
   { path: "/calendar", component: Calendar }, 
   { path: "/wallet", component: Wallet },
   { path: "/crypto", component: Crypto },
-  { path: "/test", component: Test },
+  { path: "/quizz", component: Quizz },
   { path: "/login", component: Login },
   { path: "/register", component: Register },
 ];

@@ -4,16 +4,16 @@
     <form class="login" @submit.prevent="Register">
       <h1>Creation of the account</h1>
       <label>Email  :</label>
-      <input required v-model="name" type="text" placeholder="Username"/>
+      <input class="border rounded px-2" required v-model="name" type="text" placeholder="Username"/>
       <label>Password  :</label>
-      <input required v-model="password" type="password" placeholder="Password"/>
+      <input class="border rounded px-2" required v-model="password" type="password" placeholder="Password"/>
       <label> Secret  :</label>
-      <input required v-model="secret" type="text" placeholder="Secret"/>
+      <input class="border rounded px-2" required v-model="secret" type="text" placeholder="Secret"/>
       <p>
         Already have an account??<router-link to="/login">click here</router-link>
       </p>
       <hr/>
-      <button type="submit">Register</button>
+      <button class="border rounded bg-gradient-to-r from-blue-700 to-black text-white ml-2 px-2" type="submit">Register</button>
     </form>
   </div>
   </div>
@@ -61,7 +61,7 @@ export default {
   display: grid;
   place-items: center;
   
-  background:#2D5B90;
+  background:#FFFFFF;
   width: 100%;
   height: 100%;
   
@@ -74,7 +74,7 @@ export default {
   padding: 0.5rem;
   border-radius: 10px;
   border: 2px solid rgba(39, 38, 39, 0.418);
-  background: rgb(160, 156, 216);
+  background: #FFFFFF;
   font-size: 2rem;
   text-align: center;
 }

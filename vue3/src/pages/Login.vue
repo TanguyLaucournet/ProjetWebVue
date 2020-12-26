@@ -5,14 +5,14 @@
     <form class="login" @submit.prevent="Login">
       <h1>Sign in</h1>
       <label>Username</label>
-      <input required v-model="name" type="text" placeholder="name"/>
+      <input class="border rounded px-2" required v-model="name" type="text" placeholder="name"/>
       <label>Password</label>
-      <input required v-model="password" type="password" placeholder="Password"/>
+      <input class="border rounded px-2" required v-model="password" type="password" placeholder="Password"/>
       <p>
         Dont have an account??<router-link to="/register">click here</router-link>
       </p>
       <hr/>
-      <button type="submit" >Login</button>
+      <button class="border rounded bg-gradient-to-r from-blue-700 to-black text-white ml-2 px-2" type="submit" >Login</button>
     </form>
     <p>{{ clicked }}</p>
   </div>
@@ -62,7 +62,7 @@ export default {
   display: grid;
   place-items: center;
   
-  background:#2D5B90;
+  background:#FFFFFF;
   width: 100%;
   height: 100%;
   
@@ -75,7 +75,7 @@ export default {
   padding: 0.5rem;
   border-radius: 10px;
   border: 2px solid rgba(39, 38, 39, 0.418);
-  background: rgb(160, 156, 216);
+  background: rgb(255, 255, 255);
   font-size: 2rem;
   text-align: center;
 }

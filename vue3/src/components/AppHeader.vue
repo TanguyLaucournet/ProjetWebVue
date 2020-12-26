@@ -3,7 +3,7 @@
     class="main-header"
   >
   <header class="main-header-title">
-    <img class="logo" src="/assets/iob+.png" alt="logo" />
+    
     <h1 class="main-title">CryptoCourses</h1>
   </header>
     <router-link class="md:hidden" to="/">Home</router-link>
@@ -24,14 +24,15 @@ export default {
   data() {
     return {
       list: [
+        { title: "Home", to: "/home" },
         { title: "Crypto fav", to: "/crypto" },
         { title: "Calendar", to: "/calendar" },
-        { title: "Chat", to: "/chat" },
+        { title: "Quizz", to: "/quizz" },
         { title: "Wallet", to: "/wallet" },
         { title: "Login", to: "/login" },
-        { title: "Register", to: "/register" },
+        
       ],
-      imgPath: require("/mnt/t/ESILV/A4/projet_web/og/vue3Website/vue3/src/assets/iob+.png" ),
+   
   
     };
   },
