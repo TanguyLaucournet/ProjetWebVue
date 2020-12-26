@@ -1,32 +1,50 @@
 <template>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <AppHeader />
   <div class="w-full flex">
     <router-view></router-view>
   </div>
-  <teleport to="body">
-    <LoginModal />
-  </teleport>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <h1 class="title" style="text-align:center">Contact Us</h1>
+        <br>
+        <div class="col-md">   
+          <p>
+            <a href="mailto:henry.faure-geors@edu.devinci.fr" >henry.faure-geors@edu.devinci.fr</a>
+          </p>
+        </div>
+        <div class="col-md">
+          <p>
+            <a href="mailto:tanguy.laucournet@edu.devinci.fr">tanguy.laucournet@edu.devinci.fr</a>
+          </p>
+        </div>
+        <div class="col-md">
+          <p>
+            <a href="Pierre-Louis.quandalle@edu.devinci.fr">Pierre-Louis.quandalle@edu.devinci.fr</a>
+          </p>
+      </div>
+      <p style="text-align:center"><a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a></p>
+      </div>
+    </div>
+  </div>
+
+  
+  
 </template>
 
 <script>
 import AppHeader from "./components/AppHeader";
-import LoginModal from "./components/LoginModal";
-import firebase from "./utilities/firebase";
+
+
 
 export default {
   mounted() {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        this.$store.commit("setIsLoggedIn", true);
-        this.$store.commit("setLoginModal", false);
-        this.$store.commit("setAuthUser", user);
-      } else {
-        this.$store.commit("setIsLoggedIn", false);
-        this.$store.commit("setAuthUser", {});
-      }
-    });
+    
   },
-  components: { AppHeader, LoginModal },
+  components: { AppHeader},
 };
 </script>
 

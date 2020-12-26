@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.footer {
+    position : sticky;
+    bottom: 0;
+    padding: 20px 0 20px 0;
+    background-color: #f3f3f3;
+}
+.footer .title{text-align: left;color:black;font-size:25px;}
+
+.fa{
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    color: black;
+  }
+.fa-twitter {
+    color: black
+}
+.fa-instagram{
+    color:black
+}

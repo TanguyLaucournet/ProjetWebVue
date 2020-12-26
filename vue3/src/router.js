@@ -1,31 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
-import DcHeros from "./pages/DcHeros";
+
 import Calendar from "./pages/Calendar";
 import Home from "./pages/Home";
-import Markdown from "./pages/Markdown";
-import Slider from "./pages/Slider";
-import Calculator from "./pages/Calculator";
-import ReuseableModal from "./pages/ReuseableModal";
-import UserCrud from "./pages/UserCrud";
-import Chat from "./pages/Chat";
-import Tensorflow from "./pages/Tensorflow";
+import Wallet from "./pages/Wallet";
+import Crypto from "./pages/Crypto";
+import Test from "./pages/Test";
+import Login from "./pages/Login"
 import store from "./store/index";
+import Register from "./components/Register"
 
 const routes = [
-  { path: "/", component: Home },
-  { path: "/dc-heros", component: DcHeros },
-  { path: "/calendar", component: Calendar },
-  { path: "/markdown", component: Markdown },
-  { path: "/slider-carousel", component: Slider },
-  { path: "/calculator", component: Calculator, meta: { middleware: "auth" } },
-  { path: "/resuseable-modal", component: ReuseableModal },
-  {
-    path: "/chat",
-    component: Chat,
-    meta: { middleware: "auth" },
-  },
-  { path: "/user-crud", component: UserCrud },
-  { path: "/tensorflow", component: Tensorflow },
+  { path: "/", component: Login },
+  { path: "/Home", component: Home },
+  { path: "/calendar", component: Calendar }, 
+  { path: "/wallet", component: Wallet },
+  { path: "/crypto", component: Crypto },
+  { path: "/test", component: Test },
+  { path: "/login", component: Login },
+  { path: "/register", component: Register },
 ];
 
 const router = createRouter({

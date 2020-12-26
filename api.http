@@ -1,0 +1,9 @@
+@apiPrefix = '/api/authentification'
+@port = 3000
+@host = localhost
+@baseUrl = http://{{host}}:{{port}}{{apiPrefix}}
+
+@currenciesPath = {{baseUrl}}/signup
+
+###
+POST {{currenciesPath}} HTTP/1.1
