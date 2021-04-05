@@ -4,7 +4,6 @@ const morgan = require("morgan");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const config = require("./config/db");
 const app = express();
 mongoose.connect('mongodb+srv://liviator:liviator@cluster0.h11ry.mongodb.net/Cluster0?retryWrites=true&w=majority',
   { useNewUrlParser: true,

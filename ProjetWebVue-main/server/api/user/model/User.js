@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const bcrypt = require("bcrypt");
+const crypt = require('../utils/crypt')
+
 const userSchema = mongoose.Schema({
     name: {
       type: String,
@@ -9,14 +10,25 @@ const userSchema = mongoose.Schema({
     password: {
       type: String,
       required: true,
-      unique: true
+      unique: false
     },
     secret:{
       type: String,
       required: true,
-      unique: true 
+      unique: false 
     }
   });
+
+
+  userSchema.pre('save', function preSave (next) {
+    const user = this  
+    crypt.hash(user.password)
+    .then(result => {
+      user.password = result
+    }) 
+    next();
+
+  })
 
 
 const User = mongoose.model("User",userSchema);
