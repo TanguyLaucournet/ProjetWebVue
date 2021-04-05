@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 const mongoAtlasUrl =process.env.MONGO_ATLAS_URL
-const mongoUrl = 'mongodb://venom:venom@mongo/venom'
+const mongoUrl = 'mongodb://venom:venom@localhost/venom'
 mongoose.connect(mongoUrl,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
