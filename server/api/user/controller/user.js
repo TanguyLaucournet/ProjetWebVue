@@ -1,45 +1,37 @@
-const bcrypt = require('bcrypt');
 const User = require("../model/User");
-const jwt = require("jsonwebtoken");
-
-exports.register = (req, res, next) => {
-    bcrypt.hash(req.body.password, 10)
-        .then(hash => {
-            const user = new User({
-                name: req.body.name,
-                password: hash,
-                secret: req.body.secret,
-              });
-              user.save()
-              .then(() => res.status(201).json({ user }))
-              .catch(error => res.status(400).json({ error }));
-        })
-        .catch(error => res.status(500).json({ error }));
-    
-};
+const user_query = require("../model/user-query")
 
 
-exports.login = (req,res,next) => {
-    const username = req.body.name
-    User.findOne({name: username})
-    .then(user => {
-        if(!user) { return res.status(401).json({error : "Username is incorrect"});
+exports.register  = async (req, res) => {
+    const Userdata = new User({
+        name: req.body.name,
+        password: req.body.password,
+        secret: req.body.secret,
+      });
+    try{ 
+        const user = await user_query.createUser(Userdata)
+        res.status(201).json({user})
     }
-    bcrypt.compare(req.body.password, user.password)
-    .then(result => {
-        if(!result){ return res.status(401).json({error : "Password is incorrext"})};
-        res.status(200).json({
-            userId: user._id,
-            token: jwt.sign(
-                {userId: user._id},
-                "POPOLIPOPO",
-                {expiresIn: '24h'}
-            )
-            });       
-    })
-    .catch(error => res.status(500).json({error}));
-    })
-    .catch(error=> res.status(500).json({error}));
+    catch(err){
+        res.status(400).json({message: err.message})
+    }
+}
+
+
+
+
+
+exports.login = async (req,res) => {
+    const username = req.body.name
+    const pw = req.body.password
+    try{
+        const token = await user_query.checkUser(username,pw)
+        console.log(token)
+        res.status(201).json({token})
+    }
+    catch(err){
+        res.status(400).json({message: err.message})
+    }
 };
 
 exports.secret = (req,res,next) => {
