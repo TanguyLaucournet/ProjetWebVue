@@ -7,5 +7,6 @@ const options = {
 exports.createToken = (payload) => {
   const secret = "secret"
   const token = jwt.sign(payload, secret, options)
+  console.log(token)
   return token
 }

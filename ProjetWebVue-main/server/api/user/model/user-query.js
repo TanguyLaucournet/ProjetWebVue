@@ -10,11 +10,8 @@ exports.createUser = (userdata) => {
 exports.checkUser = (username,pwd) => {
     User.findOne({name: username})
     .then(user => {
-    console.log(user)
-    console.log(pwd)
     crypt.compareHash(pwd,user.password)
-    .then(result => {
-        console.log(result)
+    .then(result => { 
         if(result){
             return token.createToken({userId: user._id})  
         }

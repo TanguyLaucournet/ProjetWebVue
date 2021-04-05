@@ -26,6 +26,7 @@ exports.login = async (req,res) => {
     const pw = req.body.password
     try{
         const token = await user_query.checkUser(username,pw)
+        console.log(token)
         res.status(201).json({token})
     }
     catch(err){

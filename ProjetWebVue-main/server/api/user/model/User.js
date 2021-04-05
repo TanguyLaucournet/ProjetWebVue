@@ -23,10 +23,11 @@ const userSchema = mongoose.Schema({
   userSchema.pre('save', function preSave (next) {
     const user = this  
     crypt.hash(user.password)
-    .then(result => {
-      user.password = result
-    }) 
-    next();
+      .then(result => {
+        user.password = result
+        next();
+      }) 
+    
 
   })
 
