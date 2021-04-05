@@ -8,6 +8,7 @@ import Quizz from "./pages/Quizz";
 import Login from "./pages/Login"
 import store from "./store/index";
 import Register from "./components/Register"
+import BlockchainInfo from "./pages/BlockchainInfo"
 
 const routes = [
   { path: "/", component: Login },
@@ -18,6 +19,7 @@ const routes = [
   { path: "/quizz", component: Quizz },
   { path: "/login", component: Login },
   { path: "/register", component: Register },
+  { path: "/blockchain", component: BlockchainInfo},
 ];
 
 const router = createRouter({

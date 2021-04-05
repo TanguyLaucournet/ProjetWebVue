@@ -1,7 +1,6 @@
 const bcrypt = require('bcrypt');
 const User = require("../model/User");
 const jwt = require("jsonwebtoken");
-const { secret } = require('/mnt/t/ESILV/A4/projet_web/vue3Website/server/config/db');
 
 exports.register = (req, res, next) => {
     bcrypt.hash(req.body.password, 10)
