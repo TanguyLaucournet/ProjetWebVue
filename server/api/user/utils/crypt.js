@@ -8,6 +8,6 @@ exports.hash  = async (pwd) => {
 }
 
 exports.compareHash = async (pwd, hash) => {
-    let result = bcrypt.compare(pwd, hash)
+    let result =await bcrypt.compare(pwd, hash)
     return result
   }

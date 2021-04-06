@@ -1,3 +1,4 @@
+const { deleteOne } = require("../model/User");
 const User = require("../model/User");
 const user_query = require("../model/user-query")
 
@@ -21,17 +22,17 @@ exports.register  = async (req, res) => {
 
 
 
-exports.login = async (req,res) => {
+exports.login = async (req,res, next) => {
     const username = req.body.name
     const pw = req.body.password
-    try{
+    try{ 
         const token = await user_query.checkUser(username,pw)
-        console.log(token)
         res.status(201).json({token})
     }
     catch(err){
         res.status(400).json({message: err.message})
     }
+
 };
 
 exports.secret = (req,res,next) => {

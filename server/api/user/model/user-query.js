@@ -7,16 +7,11 @@ exports.createUser = (userdata) => {
     return user.save().then(() => user)
 },
 
-exports.checkUser = (username,pwd) => {
-    User.findOne({name: username})
-    .then(user => {
-    crypt.compareHash(pwd,user.password)
-    .then(result => { 
-        if(result){
-            return token.createToken({userId: user._id})  
-        }
-      
-    })
-    
-    })
+exports.checkUser =  async (username,pwd ) => {
+    const user = await User.findOne({name: username})
+    const result = await crypt.compareHash(pwd,user.password)
+    if(result){
+        const tok = await token.createToken({userId: user._id})
+        return tok
+    }
 }

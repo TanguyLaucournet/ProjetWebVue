@@ -6,9 +6,9 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
-const mongoAtlasUrl =process.env.MONGO_ATLAS_URL
+const mongoAtlasUrl ="mongodb+srv://liviator:liviator@cluster0.h11ry.mongodb.net/Cluster0?retryWrites=true&w=majority"
 const mongoUrl = 'mongodb://venom:venom@localhost/venom'
-mongoose.connect(mongoUrl,
+mongoose.connect(mongoAtlasUrl,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
