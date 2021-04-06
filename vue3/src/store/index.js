@@ -1,24 +1,8 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
+import user from './user-module'
 
-const store = createStore({
-  state() {
-    return {
-      isLoggedIn: false,
-      authUser: {},
-      isLoginOpen: false,
-    };
-  },
-  mutations: {
-    setIsLoggedIn(state, payload) {
-      state.isLoggedIn = payload;
-    },
-    setAuthUser(state, payload) {
-      state.authUser = payload;
-    },
-    setLoginModal(state, payload) {
-      state.isLoginOpen = payload;
-    },
-  },
-});
-
-export default store;
+export default createStore({
+  modules: {
+    user
+  }
+})

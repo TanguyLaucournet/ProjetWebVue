@@ -56,7 +56,7 @@ export default {
 }
 
 </script>
-<style>
+<style >
 .parent {
   display: grid;
   place-items: center;

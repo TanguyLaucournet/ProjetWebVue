@@ -57,7 +57,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .parent {
   display: grid;
   place-items: center;

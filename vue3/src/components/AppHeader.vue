@@ -3,7 +3,13 @@
     class="main-header"
   >
   <header class="main-header-title">
-    
+    {{user && user.name}}
+    <div>
+      <button v-if="user"
+      @click="logout">
+        Se déconnecter
+      </button>
+    </div>
     <h1 class="main-title">CryptoCourses</h1>
   </header>
     <router-link class="md:hidden" to="/">Home</router-link>
@@ -36,12 +42,22 @@ export default {
   
     };
   },
+  computed:{
+    user(){
+        return this.$store.state.user.data
+    }
+  },
+  methods:{
+    logout(){
+      this.$store.commit('resetUser')
+    }
+  }
   
  
 };
 </script>
 
-<style>
+<style >
 .main-header {
     display: flex;
     position: sticky;

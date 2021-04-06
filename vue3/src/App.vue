@@ -21,7 +21,7 @@
         </div>
         <div class="col-md">
           <p>
-            <a href="Pierre-Louis.quandalle@edu.devinci.fr">Pierre-Louis.quandalle@edu.devinci.fr</a>
+            <a href="Pierre-Louis.quandalle@edu.devinci.fr">pierre-Louis.quandalle@edu.devinci.fr</a>
           </p>
       </div>
       <p style="text-align:center"><a href="#" class="fa fa-facebook"></a>
