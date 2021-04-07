@@ -36,6 +36,7 @@ export default {
         { title: "Quizz", to: "/quizz" },
         { title: "Wallet", to: "/wallet" },
         { title: "Login", to: "/login" },
+        { title: "Blockchain", to: "/blockchain" },
         
       ],
    

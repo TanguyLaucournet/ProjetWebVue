@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+
+  api:
+    image: venom_api:latest
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: venom_api
+    depends_on:
+      - mongo
+    ports:
+      - 3000:3000
