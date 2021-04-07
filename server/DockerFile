@@ -7,6 +7,8 @@ EXPOSE 3000
 # Copy source code from src to /app/src
 COPY api/user src/
 
+COPY index.js src/
+
 COPY  package.json package-lock.json ./
 
 FROM base as development
