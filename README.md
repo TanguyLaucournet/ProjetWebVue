@@ -12,7 +12,7 @@ Vous avez différentes options pour la navigation:
 * scanner une adresse ethereum
 
 ## Utilisation du code
-Cette application est déployée sur heroku  
+Le déploiement sur heroku du code à l'aide de dockerfile n'a pas fonctionné
 Si toutefois vous voulez l'utiliser depuis le code vous pouvez cloner ce dépôt puis vous placer dans le dossier vue3 et run les commandes 
 
 ### `npm install -g`
