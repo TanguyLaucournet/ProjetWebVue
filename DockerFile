@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY vue3/src src/
 COPY vue3/public public/
-COPY vue3/.browserslistrc vue3/babel.config.js vue3/package-lock.json vue3/package.json vue3/vue.config.js ./
+COPY vue3/babel.config.js vue3/package-lock.json vue3/package.json vue3/vue.config.js ./
 
 RUN npm ci
 RUN npm run build
