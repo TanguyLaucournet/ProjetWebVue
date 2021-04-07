@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
-const mongoAtlasUrl ="mongodb+srv://liviator:liviator@cluster0.h11ry.mongodb.net/Cluster0?retryWrites=true&w=majority"
+const mongoAtlasUrl =process.env.MONGO_ATLAS_UTL || "mongodb+srv://liviator:liviator@cluster0.h11ry.mongodb.net/Cluster0?retryWrites=true&w=majority"
 const mongoUrl = 'mongodb://venom:venom@localhost/venom'
 mongoose.connect(mongoAtlasUrl,
   { useNewUrlParser: true,
