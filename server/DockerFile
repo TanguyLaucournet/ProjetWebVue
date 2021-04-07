@@ -5,7 +5,7 @@ WORKDIR /app
 EXPOSE 3000
 
 # Copy source code from src to /app/src
-COPY api/user user/
+COPY api/user src/
 
 COPY  package.json package-lock.json ./
 
